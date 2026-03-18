@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+
+.food-text {
+    color: #332F2E;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.food-title {
+    font-size: 1.25rem;
+
+}
+
+.food-p {
+    font-size: 1rem;
+}
+
+
+.food-item img {
+    aspect-ratio: 260/197;
+    object-fit: cover;
+}
+
+
+.food-item {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 4px;
+}
+
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 50px;
+    justify-content: center;
+    align-content: center;
+    background-color: #FFF6B8;
+    border-radius: 10px;
+    padding: 80px 190px 200px 190px;
+}
+
+.row-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    translate: 250% 100%;
+    z-index: 1;
+}
+
+
+
+
+/* 固まりごとにホバーで少し大きくなる */
+.food-hover {
+    /* 0.3秒かけて動く*/
+    transition: 0.2s ease;
+    box-shadow: 0.2s ease;
+}
+
+.food-hover:hover {
+    transform: scale(1.03);
+box-shadow: 4px 6px 14px rgba(0,0,0,0.12);
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* menu詳細ページ */
+
+
+.menu-title {
+    color: #E83B2B;
+    font-size: 2.25rem;
+    font-family: "DotGothic16", sans-serif;
+    border-left: #E83B2B 6px solid;
+    padding-left: 26px;
+}
+
+.menu-sub {
+    color: #332F2E;
+    font-size: 1.5rem;
+    font-family: "DotGothic16", sans-serif;
+}
+
+.menu-p {
+    color: #332F2E;
+    font-size: 1rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: bold;
+}
+
+
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    text-align: left;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+
+.menu-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 58px;
+    background-color: #FFF6B8;
+    border-radius: 10px;
+    padding: 80px 30% 315px ;
+}
+
+.menu-flex img {
+    max-width: 735px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
+
+
+.btn {
+    color: #FFF6B8;
+    font-size: 1.25rem;
+    background-color: #E83B2B;
+    border-radius: 8px;
+    padding: 16px 64px;
+}
+
+.btn:hover {
+    color: #E83B2B;
+    border: #E83B2B 2px solid;
+    background-color: #FFF6B8;
+    transition: 0.3s;
+}
+
+
+
+@media(max-width: 1150px) {
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media(max-width: 900px) {
+    .food-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* スマートフォン-------------------------- */
+
+/* ブレークポイント:768px */
+@media(max-width: 768px) {
+
+    .food-text {
+        gap: 8px;
+    }
+
+    .food-title {
+        font-size: 1.5rem;
+
+    }
+
+
+    .food-item {
+        gap: 16px;
+    }
+
+
+    .food-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        justify-content: center;
+        align-content: center;
+        border-radius: 4px;
+        padding-bottom: 200px;
+        padding: 60px 30px;
+        margin-bottom: 160px;
+    }
+
+
+    .row-title {
+        position: static;
+        translate: none;
+    }
+
+
+
+    /* メニュー詳細 */
+
+
+    .menu-title {
+    font-size: 1.5rem;
+    border-left: #E83B2B 4px solid;
+    padding-left: 16px;
+}
+
+.menu-sub {
+    font-size: 1rem;
+}
+
+.menu-p {
+    font-size: 0.875rem;
+}
+
+
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+}
+
+
+.menu-flex {
+    gap: 50px;
+    border-radius: 4px;
+    padding: 30px 10px 200px 10px;
+}
+
+.btn {
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 12px 44px;
+}
+
+
+}

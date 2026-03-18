@@ -1,0 +1,566 @@
+@charset "UTF-8";
+
+/* 共通 */
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #FFF6B8;
+    background-color: #E83B2B;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1{
+    line-height: 0;
+}
+
+
+/* コンテンツ幅 */
+
+.wrapper {
+    max-width: 1440px;
+    width: 78%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ヘッダー */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    background-color: rgb(254, 254, 254, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 4px 32px;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+
+.logo img {
+    width: 64px;
+}
+
+.header-img {
+    width: 172px;
+
+}
+
+.icon1 {
+    width: 36px;
+}
+
+.icon2 {
+    width: 38px;
+}
+
+
+/* ハンバーガーメニュー */
+.ham-menu-btn {
+    width: 41px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ham-menu-btn span {
+    display: inline-block;
+    width: 41px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 10px;
+    position: relative;
+}
+
+.ham-menu-btn span::before,
+.ham-menu-btn span::after {
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 10px;
+    position: absolute;
+    transition: all 0.3;
+}
+
+.ham-menu-btn span::before {
+    bottom: 14px;
+    left: 0;
+}
+
+.ham-menu-btn span::after {
+    top: 14px;
+    left: 0;
+}
+
+.ham-menu-cont {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #FED600;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 440px;
+    height: 774px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.open .ham-menu-btn span {
+    background-color: transparent;
+}
+
+.open .ham-menu-btn span::before {
+    bottom: 0px;
+    rotate: 45deg;
+}
+
+.open .ham-menu-btn span::after {
+    top: 0px;
+    rotate: -45deg;
+}
+
+.open .ham-menu-cont {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ham-held {
+    margin-top: 104px;
+
+}
+
+.ham-held p {
+    color: #000;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 1.25rem;
+    line-height: 2;
+    letter-spacing: 10%;
+    margin-left: 48px;
+}
+
+
+.ham-menu-list {
+    margin-top: 36px;
+    margin-bottom: 10px;
+}
+
+.ham-menu-list a {
+    display: inline-block;
+    color: #332F2E;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: -5%;
+    border-left: #332F2E 5px solid;
+    padding-left: 24px;
+    margin-left: 48px;
+    margin-bottom: 36px;
+}
+
+.ham-menu-list span {
+    color: #F9EEF4;
+    font-size: 3rem;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 800;
+    -webkit-text-stroke: 2px #332F2E;
+}
+
+.ham-sns p {
+    color: #000;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    text-align: right;
+    padding-right: 32px;
+}
+
+/* ヘッダーここまで */
+
+
+
+
+
+/* パンくずリスト */
+
+
+.bread-list {
+    margin-top: 187px;
+    margin-bottom: 70px;
+}
+
+.bread-list-cont {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 24px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+}
+
+.bread-list-cont a {
+    color: #FFF6B8;
+    font-size: 1rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+}
+
+
+
+/* タイトル */
+
+
+.row-title {
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-rl;
+}
+
+.row-text {
+    color: #E83B2B;
+    font-size: 3.5rem;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 800;
+    text-align: left;
+}
+
+
+.line {
+    border-right: #E83B2B 6px solid;
+    height: 360px;
+}
+
+.title-flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* フッター */
+footer {
+    background-color: #FED600;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 100vw 150px 0px;
+    border-color: transparent transparent #FED600 transparent;
+    position: absolute;
+    bottom: 100%;
+
+}
+
+.footer-num {
+    color: #332F2E;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 10%;
+    margin-bottom: 32px;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.footer-text p {
+    color: #332F2E;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 600;
+    line-height: 2;
+}
+
+a:has(.top-img) {
+    position: absolute;
+    top: 0;
+    right: 104px;
+    translate: 0 -50%;
+}
+
+.top-img {
+    width: 70px;
+}
+
+.ticket {
+    width: 153px;
+    position: fixed;
+    z-index: 999;
+    right: 64px;
+    bottom: 20px;
+}
+
+.ticket-sp {
+    display: none;
+}
+
+
+
+
+@media(max-width: 768px) {
+
+    .wrapper {
+        width: 92%;
+    }
+
+    /* ヘッダー */
+
+    .page-header {
+        top: 48px;
+        padding: 4px 16px;
+    }
+
+
+    .nav-flex {
+        gap: 16px;
+    }
+
+
+    .logo img {
+        width: 38px;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .nav-icon {
+        line-height: 0;
+    }
+
+    .icon1 {
+        width: 28px;
+    }
+
+    .icon2 {
+        width: 28px;
+    }
+
+
+    /* ハンバーガーメニュー */
+    /* ハンバーガーメニューボタン　閉じてる時 */
+    .ham-menu-btn {
+        width: 24px;
+        height: 16px;
+    }
+
+    .ham-menu-btn span {
+        width: 24px;
+        height: 2px;
+    }
+
+    .ham-menu-btn span::before,
+    .ham-menu-btn span::after {
+        width: 24px;
+        height: 2px;
+    }
+
+    .ham-menu-btn span::before {
+        bottom: 7px;
+    }
+
+    .ham-menu-btn span::after {
+        top: 7px;
+    }
+
+
+    /* ハンバーガーメニュー中身　閉じてる時 */
+    .ham-menu-cont {
+        width: 70%;
+        max-width: 440px;
+        height: 568px;
+    }
+
+
+    .ham-held {
+        margin-top: 72px;
+
+    }
+
+    .ham-held p {
+        font-size: 0.875rem;
+        margin-left: 32px;
+    }
+
+
+    .ham-menu-list {
+        margin-top: 32px;
+        margin-bottom: 8px;
+    }
+
+    .ham-menu-list a {
+        border-left: #332F2E 4px solid;
+        padding-left: 18px;
+        margin-left: 30px;
+        margin-bottom: 24px;
+    }
+
+    .ham-menu-list span {
+        font-size: 2rem;
+        -webkit-text-stroke: 1px #332F2E;
+    }
+
+
+    /* ヘッダーここまで */
+
+
+
+
+
+
+    /* パンくずリスト */
+
+
+    .bread-list {
+        margin-top: 128px;
+        margin-bottom: 32px;
+    }
+
+    .bread-list-cont {
+        gap: 16px;
+    }
+
+
+
+    /* タイトル */
+    .row-title {
+        flex-direction: column;
+        writing-mode: horizontal-tb;
+    }
+
+    .row-text {
+        color: #FFF6B8;
+        font-size: 2.5rem;
+        font-family: "Oxanium", sans-serif;
+        font-weight: 800;
+        text-align: left;
+    }
+
+
+    .line {
+        border-right: none;
+        border-bottom: #FFF6B8 6px solid;
+        height: max-content;
+    }
+
+    .title-flex {
+        flex-direction: column;
+        gap: 46px;
+    }
+
+
+
+
+    /* フッター */
+    footer {
+        padding-bottom: 32px;
+    }
+
+    footer::before {
+        border-width: 0px 100vw 100px 0px;
+    }
+
+    .footer-num {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 0;
+    }
+
+
+    .footer-text p {
+        font-size: 0.875rem;
+
+    }
+
+    a:has(.top-img) {
+        top: 0;
+        right: 15px;
+        translate: 0 -70%;
+    }
+
+    .top-img {
+        width: 61px;
+    }
+
+    .ticket {
+        display: none;
+    }
+
+    .ticket-sp-img {
+        width: 30px;
+    }
+
+
+    .ticket-sp {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(254, 254, 254, 0.5);
+        border-radius: 28px;
+        backdrop-filter: blur(10px);
+        padding: 10px 0;
+        position: fixed;
+        z-index: 999;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .ticket-sp p {
+        color: #332F2E;
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+
+body {
+    background-color: #FFF6B8;
+}
+
+/* <!-- パンくずリスト --> */
+
+.bread-list-cont li {
+    color: #332F2E;
+}
+
+.bread-list-cont a {
+    color: #332F2E;
+}
+
+
+
+
+
+.contact p {
+    color: #332F2E;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    text-align: left;
+    line-height: 2;
+}
+
+.con-text {
+    margin-bottom: 64px;
+}
+
+.con-item {
+    margin-bottom: 40px;
+}
+
+.con-item p {
+    font-family: "DotGothic16", sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    /* 角丸 */
+    box-sizing: border-box;
+    /* はみ出し防止の呪文? */
+}
+
+.con-item textarea {
+    height: 200px;
+}
+
+.con-box{
+    margin-bottom: 100px;
+}
+
+
+
+/* 送信ボタン */
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    background-color: #E83B2B;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    padding: 16px 64px;
+    width: 208px;
+    margin-bottom: 200px;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* スマートフォン-------------------------- */
+
+/* ブレークポイント:768px */
+@media(max-width: 768px) {
+
+    /* タイトル */
+
+    .row-text {
+        color: #E83B2B;
+    }
+
+
+    .line {
+        border-bottom: #E83B2B 6px solid;
+    }
+
+
+.con-text {
+    font-size: 0.875rem;
+    line-height: 2.4;
+    margin-bottom: 32px;
+}
+
+.con-item {
+    margin-bottom: 16px;
+}
+
+.con-item p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+input,
+textarea {
+    padding: 8px;
+}
+
+.con-item textarea {
+    height: 140px;
+}
+
+.con-box{
+    margin-bottom: 48px;
+}
+
+
+/* 送信ボタン */
+
+input[type="submit"] {
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 12px 44px;
+    margin-bottom: 140px;
+}
+
+}
